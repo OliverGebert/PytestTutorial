@@ -6,6 +6,8 @@ def test_add_raises():
     with pytest.raises(TypeError):
         tasks.add(task = 'not a Task object')
 
+
+@pytest.mark.smoke
 def test_start_tasks_db_raises():
     # make sure unsuported db raises an exception
     with pytest.raises(ValueError) as excinfo:

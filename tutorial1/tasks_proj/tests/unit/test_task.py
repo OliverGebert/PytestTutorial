@@ -1,7 +1,8 @@
 """Test the Task data type."""
 from tasks import Task
+import pytest
 
-
+@pytest.mark.smoke
 def test_asdict():
     """_asdict() should return a dictionary."""
     t_task = Task('do something', 'okken', True, 21)
@@ -27,7 +28,7 @@ def test_defaults():
     t2 = Task(None, None, False, None)
     assert t1 == t2
 
-
+@pytest.mark.smoke
 def test_member_access():
     """Check .field functionality of namedtuple."""
     t = Task('buy milk', 'brian')
